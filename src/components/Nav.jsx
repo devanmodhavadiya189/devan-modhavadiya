@@ -42,6 +42,7 @@ export default function Nav() {
           <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
           <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
           <li><a href="#dsa" onClick={closeMenu}>DSA</a></li>
+          <li><a href="#achievements" onClick={closeMenu}>Achievements</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
       </div>

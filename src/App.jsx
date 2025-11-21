@@ -10,6 +10,7 @@ import Education from './sections/Education'
 import Projects from './sections/Projects'
 import Experience from './sections/Experience'
 import DSA from './sections/DSA'
+import Achievements from './sections/Achievements'
 import Contact from './sections/Contact'
 
 function AppContent() {
@@ -51,6 +52,7 @@ function AppContent() {
       <Projects />
       <Experience />
       <DSA />
+      <Achievements />
       <Contact />
     </div>
   )
