@@ -1,0 +1,98 @@
+.dsa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dsa-card {
+  padding: 32px 24px;
+  border: 2px solid #e0e0e0;
+  text-align: center;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.dark .dsa-card {
+  border-color: #333333;
+}
+
+.dsa-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.dark .dsa-card::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+}
+
+.dsa-card:hover::before {
+  left: 100%;
+}
+
+.dsa-card:hover {
+  border-color: #000000;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dark .dsa-card:hover {
+  border-color: #ffffff;
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.15);
+}
+
+.dsa-card svg {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+  transition: transform 0.4s ease;
+  transform: translateZ(0);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.dsa-card i {
+  margin-bottom: 16px;
+  transition: transform 0.4s ease;
+  display: inline-block;
+}
+
+.si {
+  display: inline-block;
+}
+
+.dsa-card:hover svg {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.dsa-card:hover i {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+.dsa-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dsa-card p {
+  font-size: 13px;
+  color: #666666;
+  font-weight: 600;
+}
+
+.dark .dsa-card p {
+  color: #999999;
+}

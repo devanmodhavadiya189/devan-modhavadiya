@@ -1,0 +1,80 @@
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: inherit;
+  border: 2px solid currentColor;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 22px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 
+              0 0 0 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.dark .theme-toggle {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15),
+              0 0 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: currentColor;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.theme-toggle:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(180deg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2),
+              0 0 0 4px rgba(0, 0, 0, 0.05);
+  border-color: currentColor;
+}
+
+.dark .theme-toggle:hover {
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.25),
+              0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle i {
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.theme-toggle:hover i {
+  color: var(--bg-light);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.dark .theme-toggle:hover i {
+  color: var(--bg-dark);
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.8));
+}
+
+.theme-toggle:active {
+  transform: scale(0.95) rotate(180deg);
+}

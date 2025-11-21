@@ -1,0 +1,11 @@
+:root {
+  --bg-light: #ffffff;
+  --text-light: #000000;
+  --secondary-light: #666666;
+  --border-light: #e0e0e0;
+  
+  --bg-dark: #000000;
+  --text-dark: #ffffff;
+  --secondary-dark: #999999;
+  --border-dark: #333333;
+}

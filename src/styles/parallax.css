@@ -1,0 +1,73 @@
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  will-change: transform;
+  max-width: 100vw;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.light .parallax-gradient {
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, transparent 70%);
+}
+
+.dark .parallax-gradient {
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+}
+
+.parallax-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  will-change: transform;
+}
+
+.light .parallax-circle {
+  border: 3px solid #000000;
+  background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
+}
+
+.dark .parallax-circle {
+  border: 3px solid #ffffff;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+}
+
+.parallax-square {
+  position: absolute;
+  opacity: 0.18;
+  will-change: transform;
+  transform-origin: center;
+}
+
+.light .parallax-square {
+  border: 2px solid #000000;
+  background: linear-gradient(135deg, rgba(0,0,0,0.08) 0%, transparent 100%);
+}
+
+.dark .parallax-square {
+  border: 2px solid #ffffff;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 100%);
+}
+
+.parallax-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.4;
+  will-change: transform;
+}
+
+.light .parallax-dot {
+  background: #000000;
+}
+
+.dark .parallax-dot {
+  background: #ffffff;
+}
