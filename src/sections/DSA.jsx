@@ -4,7 +4,7 @@ export default function DSA() {
   const sectionRef = useScrollAnimation('left')
   
   const platforms = [
-    { name: 'LeetCode', url: import.meta.env.VITE_LEETCODE_URL || '#', rating: 'Max rating : 1748 ', icon: 'leetcode' },
+    { name: 'LeetCode', url: import.meta.env.VITE_LEETCODE_URL || '#', rating: 'Max rating : 1882 Knight ', icon: 'leetcode' },
     { name: 'Codeforces', url: import.meta.env.VITE_CODEFORCES_URL || '#', rating: 'Pupil', icon: 'codeforces' },
     { name: 'CodeChef', url: import.meta.env.VITE_CODECHEF_URL || '#', rating: '3 Star', icon: 'codechef' }
   ]
